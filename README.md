@@ -2,15 +2,20 @@
 将Bookstack知识库软件的webhook消息转发给指定邮箱
 # 2 选项
 ```shell
+[root@testkb dist]# ./webhookToEmail  -h
+usage: webhookToEmail [-h] [-listen LISTEN] [-smtpserver SMTPSERVER] [-smtpport SMTPPORT] [-sender SENDER] [-password PASSWORD] [-file FILE]
+
 A script for sending emails based on webhook data
 
 options:
-  -h, --help             show this help message and exit
-  -listen LISTEN         webhook listener port
-  -smtpserver SMTPSERVER The SMTP server address,example:smtp.exmail.qq.com
-  -smtpport SMTPPORT     The SMTP server port
-  -sender SENDER         The sender email address,example:zhangsan@qq.com
-  -password PASSWORD     The sender email password
+  -h, --help            show this help message and exit
+  -listen LISTEN        webhook listener port
+  -smtpserver SMTPSERVER
+                        The SMTP server address,example:smtp.exmail.qq.com
+  -smtpport SMTPPORT    The SMTP server port
+  -sender SENDER        The sender email address,example:zhangsan@qq.com
+  -password PASSWORD    The sender email password
+  -file FILE            The reciver email file
 ```
 # 3 使用例子
 ## 3.1 发起评论，触发webhook
