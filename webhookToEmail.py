@@ -46,7 +46,8 @@ def send_email(data, smtpserver, smtpport, sender, password):
     try: # 使用try执行处理异常
         with smtplib.SMTP_SSL(smtpserver, smtpport, context=context) as server:
             server.login(sender, password)
-            server.send_message(msg, sender, receiver_emails)    
+            server.send_message(msg, sender, receiver_emails)   
+            print("send email OK!\n")
     except Exception as e:
         print("Error occurred while sending email:", e)
   
